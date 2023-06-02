@@ -39,15 +39,20 @@
   text-decoration: none;
   color: whitesmoke;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .nav-list li a:hover {
-  color: burlywood;
+  color: black;
+  background-color: #bae6fd;
 }
 
 .background {
-  background: rgba(0, 0, 0);
+  /* background: rgba(0, 0, 0); */
+  background-image: url("/static/img/color.jpg");
+  background-size: cover;
+  height: auto;
+  background-blend-mode: darken;
   /* background-size: cover;
   background-blend-mode: lighten; */
 }
@@ -61,9 +66,7 @@
   /* display: none; */
   height: 100vh;
   /* background-image: url("/static/img/imm.jpg"); */
-  background-color: cornflowerblue;
-  background-size: cover;
-  /* background-blend-mode: lighten; */
+  /* background-color: cornflowerblue; */
 }
 
 .searchSec {
@@ -116,6 +119,10 @@
   padding: 0px 5px;
 }
 
+#form:hover {
+  /* color: aquamarine; */
+  background-color: #c7d2fe;
+}
 ::placeholder {
   color: black;
   opacity: 0.7;
@@ -147,12 +154,14 @@ button {
   height: 60vh;
   width: 40%;
   margin: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 10px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
-  background-color: #ccc;
-  background-size: cover;
+  background-color: #bae6fd;
+  /* background-size: cover; */
+  padding: 20px;
 }
 
 .cImg {
@@ -201,13 +210,14 @@ button {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  /* background-color: #ccc; */
+  background-color: #c7d2fe;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: rgb(215, 209, 200);
+  background-color: #bae6fd;
   display: none;
   margin-left: 25%;
   /* margin: auto; */
@@ -255,7 +265,7 @@ button {
 }
 
 .contain {
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 
 /* @media only screen and (max-width: 1421px) {

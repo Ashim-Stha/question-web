@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="{%static 'Search.css' %}" />
     <title>Search text in pdf</title>
   </head>
-  <body>
-    <nav class="navbar background">
+  <body class="background">
+    <nav class="navbar">
       <ul class="nav-list">
+        {% comment %}
         <div class="logo">
           <img src="{%static 'img/icons8-logo-50.png' %}" alt="logo" />
         </div>
-        <li><a href="home.html">Home is search</a></li>
+        {% endcomment %}
+        <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact">Contact</a></li>
@@ -54,8 +56,8 @@
           <ul class="check">
             <p>Level:</p>
             <li>
-              <input class="check" type="checkbox" name="ioe" id="ioe" />
               <label class="lab" for="ioe">IOE</label>
+              <input class="check" type="checkbox" name="ioe" id="ioe" />
             </li>
             <button class="btn" onclick="clicked()">SUBMIT</button>
           </ul>
@@ -63,26 +65,27 @@
           <ul class="check">
             <p>Faculty:</p>
             <li>
-              <input class="check" type="checkbox" name="BCE" id="BCE" />
-              <label class="lab" style="margin-right: 0px" for="BCE">BCE</label>
+              <label class="lab" style="margin-right: 0px" for="BCE">BCE</label
+              ><input class="check" type="checkbox" name="BCE" id="BCE" />
             </li>
 
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCT">BCT</label>
+              <label class="lab" for="BCT">BCT</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BEI" id="BEI" />
-              <label class="lab" style="margin-right: 5px" for="BEI">BEI</label>
+              <label class="lab" style="margin-right: 5px" for="BEI">BEI</label
+              ><input class="check" type="checkbox" name="BEI" id="BEI" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BME" id="BME" />
-              <label class="lab" style="padding: 10px" for="BME">BME</label>
+              <label class="lab" style="padding: 10px" for="BME">BME</label
+              ><input class="check" type="checkbox" name="BME" id="BME" />
             </li>
           </ul>
           <ul class="check">
             <p>Semester:</p>
             <li>
+              <label class="lab" for="ioe">I/I</label>
               <input
                 class="check"
                 type="checkbox"
@@ -90,31 +93,30 @@
                 name="ioe"
                 id="ioe"
               />
-              <label class="lab" for="ioe">I/I</label>
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">I/II</label>
+              <label class="lab" for="BCE">I/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">II/I</label>
+              <label class="lab" for="BCE">II/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">III/I</label>
+              <label class="lab" for="BCE">III/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">III/II</label>
+              <label class="lab" for="BCE">III/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">IV/I</label>
+              <label class="lab" for="BCE">IV/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
             <li>
-              <input class="check" type="checkbox" name="BCT" id="BCT" />
-              <label class="lab" for="BCE">IV/II</label>
+              <label class="lab" for="BCE">IV/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
             </li>
           </ul>
         </div>

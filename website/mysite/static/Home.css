@@ -115,6 +115,11 @@
   padding: 0px 5px;
 }
 
+#form:hover {
+  /* color: aquamarine; */
+  background-color: #c7d2fe;
+}
+
 ::placeholder {
   color: black;
   opacity: 0.7;
