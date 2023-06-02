@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'Search.css' %}" />
+    <title>Search text in pdf</title>
+  </head>
+  <body>
+    <nav class="navbar background">
+      <ul class="nav-list">
+        <div class="logo">
+          <img src="{%static 'img/icons8-logo-50.png' %}" alt="logo" />
+        </div>
+        <li><a href="home.html">Home is search</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="home">
+      <div class="searchSec">
+        <form
+          role="search"
+          id="form"
+          method="GET"
+          action="{% url 'search_view'%}"
+        >
+          <input
+            class="inputt"
+            type="search"
+            id="query"
+            name="q"
+            placeholder="Search..."
+            aria-label="Search through site content"
+          />
+          <button type="submit">
+            <svg viewBox="0 0 1024 1024">
+              <path
+                class="path1"
+                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <button class="accordion"><h4>Filters</h4></button>
+      <div class="panel">
+        <div class="filteritems">
+          <ul class="check">
+            <p>Level:</p>
+            <li>
+              <label class="lab" for="ioe">IOE</label>
+              <input class="check" type="checkbox" name="ioe" id="ioe" />
+            </li>
+            <button class="btn" onclick="clicked()">SUBMIT</button>
+          </ul>
+
+          <ul class="check">
+            <p>Faculty:</p>
+            <li>
+              <label class="lab" style="margin-right: 0px" for="BCE">BCE</label
+              ><input class="check" type="checkbox" name="BCE" id="BCE" />
+            </li>
+
+            <li>
+              <label class="lab" for="BCT">BCT</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" style="margin-right: 5px" for="BEI">BEI</label
+              ><input class="check" type="checkbox" name="BEI" id="BEI" />
+            </li>
+            <li>
+              <label class="lab" style="padding: 10px" for="BME">BME</label
+              ><input class="check" type="checkbox" name="BME" id="BME" />
+            </li>
+          </ul>
+          <ul class="check">
+            <p>Semester:</p>
+            <li>
+              <label class="lab" for="ioe">I/I</label>
+              <input
+                class="check"
+                type="checkbox"
+                onclick="clicked()"
+                name="ioe"
+                id="ioe"
+              />
+            </li>
+            <li>
+              <label class="lab" for="BCE">I/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" for="BCE">II/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" for="BCE">III/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" for="BCE">III/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" for="BCE">IV/I</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+            <li>
+              <label class="lab" for="BCE">IV/II</label
+              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content"></div>
+      <section class="contain">
+        <center>
+          <div class="container">
+            <li>
+              {% for c in results %} Faculty:{{ c.faculty }} &nbsp &nbsp &nbsp
+              &nbsp Semester: {{c.semester}} &nbsp &nbsp &nbsp year:{{c.year}}
+              <br />
+              <img class="cImg" src="{% static "img/" %}{{ c.imagecropped }} "
+              alt="{% static "img/" %}{{ c.imagecropped }} " />
+              <hr class="dashed" />
+            </li>
+
+            {% endfor %} {% comment %}
+            https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
+            https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
+            {% endcomment %}
+          </div>
+        </center>
+      </section>
+    </section>
+
+    <script src="{%static 'js/year.js' %}"></script>
+    <script src="{%static 'js/accordion.js' %}"></script>
+    <script src="{%static 'js/data.js' %}"></script>
+    <script src="{%static 'js/search.js' %}"></script>
+  </body>
+  <script>
+    // let vall = document.getElementById("ioe");
+    // console.log(vall.checked);
+
+    // function clicked() {
+    //   console.log("clicked");
+    //   vall.checked = true;
+    // }
+    // const form = document.getElementById("form");
+
+    // form.addEventListener("submit", function (event) {
+    //   event.preventDefault(); // Prevents the form from submitting and refreshing the page
+
+    // const url = "https://example.com/search?q=" + encodeURIComponent(query);
+
+    // window.location.href = url;
+
+    // You can perform further actions with the query string, such as making an API request or manipulating the DOM.
+    // });
+  </script>
+
+  <script>
+    // const f = document.getElementById("form");
+    // const q = document.getElementById("query");
+    // // const google = "https://www.google.com/search?q=site%3A+";
+    // // const site = "pagedart.com";
+    // function submitted(event) {
+    //   event.preventDefault();
+    //   // const url = google + site + "+" + q.value;
+    //   const url = "https://www.google.com";
+    //   const win = window.open(url, "_blank");
+    //   win.focus();
+    // }
+
+    // f.addEventListener("submit", submitted);
+  </script>
+</html>

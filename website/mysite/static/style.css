@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  position: sticky;
+  top: 0;
+
+  padding: 2px 2px;
+}
+
+.logo img {
+  /* width: 38%; */
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* background-color: antiquewhite; */
+}
+
+.nav-list li {
+  list-style: none;
+  /* padding: 7px 19px; */
+  padding: 1% 1.2%;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav-list li a:hover {
+  color: burlywood;
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+.home {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: antiquewhite;
+}
+
+.searchSec {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4%;
+  /* margin-left: 45px; */
+}
+
+#search {
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 0px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 125px;
+  /* margin: 8px 14px; */
+  color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(116, 116, 194);
+}
+
+#form {
+  background-color: #eeecf0;
+  width: 800px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inputt {
+  all: unset;
+  font: 22px system-ui;
+  color: black;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 26px;
+}
+
+.content {
+  margin-top: 52px;
+}
+
+.container {
+  height: 10vh;
+  width: 50%;
+  margin: auto;
+  border: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: antiquewhite;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.year {
+  font-weight: bolder;
+}
+
+/* accordion */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  /* padding: 18px; */
+  /* width: 100%; */
+  margin-left: 25%;
+  margin-top: 8px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(215, 209, 200);
+  display: none;
+  margin-left: 25%;
+  /* margin: auto; */
+  overflow: hidden;
+  width: 25%;
+}
+
+.filteritems {
+  display: flex;
+  flex-direction: row;
+}
+
+/* input[type="checkbox"] {
+  appearance: checkbox !important;
+} */
+/* input.checkbox {
+  display: inline-block;
+} */
+
+.check {
+  list-style: none;
+  margin-top: 3px;
+  margin-right: 22px;
+  max-width: fit-content;
+}
+
+.lab {
+  padding: 12px;
+}
