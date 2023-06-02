@@ -203,6 +203,7 @@ button {
   /* margin: auto; */
   overflow: hidden;
   width: 25%;
+  max-width: 100%;
 }
 
 .filteritems {
@@ -220,8 +221,7 @@ button {
 .check {
   list-style: none;
   margin-top: 3px;
-  margin-right: 22px;
-  max-width: fit-content;
+  padding-right: 20px;
 }
 
 .lab {
@@ -244,14 +244,20 @@ button {
   font-family: "Pangolin", cursive;
 }
 
-@media only screen and (max-width: 1421px) {
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 1135px) {
   .panel {
-    padding: 0 18px;
-    background-color: rgb(96, 193, 0);
-    /* display: none; */
-    margin-left: 25%;
-    /* margin: auto; */
-    overflow: hidden;
-    width: 25%;
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .panel {
+    margin-left: 7%;
   }
 }
