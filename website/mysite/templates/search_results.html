@@ -24,68 +24,77 @@
     </nav>
 
     <section class="home">
-      <div class="searchSec">
-        <form
-          role="search"
-          id="form"
-          method="GET"
-          action="{% url 'search_view'%}"
-        >
-          <input
-            class="inputt"
-            type="search"
-            id="query"
-            name="q"
-            placeholder="Search..."
-            aria-label="Search through site content"
-          />
-          <button type="submit">
-            <svg viewBox="0 0 1024 1024">
-              <path
-                class="path1"
-                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
-              ></path>
-            </svg>
-          </button>
-        </form>
+      <form role="search"  method="GET" action="{% url 'search_view'%}">
+        <div class="searchSec">
+        <div id="form">
+        <input
+          class="inputt"
+          type="search"
+          id="query"
+          name="q"
+          placeholder={{query}}
+          aria-label="Search through site content"
+        />
+        <button type="submit">
+          <svg viewBox="0 0 1024 1024">
+            <path
+              class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"
+            ></path>
+          </svg>
+        </button>
       </div>
+      {% comment %} </form> {% endcomment %}
+    </div>
+     
 
-      <button class="accordion"><h4>Filters</h4></button>
+      <button type="button" class="accordion"><h4>Filters</h4></button>
       <div class="panel">
+        {% comment %} <form  method="GET" action="{% url 'search_view'%}"> {% endcomment %}
         <div class="filteritems">
+          
           <ul class="check">
+            
+             
             <p>Level:</p>
             <li>
-              <label class="lab" for="ioe">IOE</label>
+             
               <input class="check" type="checkbox" name="ioe" id="ioe" />
+              <label class="lab" for="ioe">IOE</label>
             </li>
-            <button class="btn" onclick="clicked()">SUBMIT</button>
+            <button class="btn" >SUBMIT</button>
           </ul>
 
           <ul class="check">
             <p>Faculty:</p>
             <li>
+              <input class="check" type="checkbox" id="BCE"  name="boxe" value="BCE" />
               <label class="lab" style="margin-right: 0px" for="BCE">BCE</label
-              ><input class="check" type="checkbox" name="BCE" id="BCE" />
+                >
             </li>
 
             <li>
+              <input class="check" type="checkbox" name="boxe" value="BCT" id="BCE"  />
               <label class="lab" for="BCT">BCT</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+                >
             </li>
             <li>
+              <input class="check" type="checkbox" name="boxe" value="BEI" id="BEI"  />
               <label class="lab" style="margin-right: 5px" for="BEI">BEI</label
-              ><input class="check" type="checkbox" name="BEI" id="BEI" />
+                >
             </li>
             <li>
-              <label class="lab" style="padding: 10px" for="BME">BME</label
-              ><input class="check" type="checkbox" name="BME" id="BME" />
+             <input class="check" type="checkbox" name="boxe" value="BME" id="BME"   />
+             <label class="lab" style="padding: 10px" for="BME">BME</label
+              >
             </li>
+          
           </ul>
+        
           <ul class="check">
             <p>Semester:</p>
             <li>
-              <label class="lab" for="ioe">I/I</label>
+              
               <input
                 class="check"
                 type="checkbox"
@@ -93,55 +102,64 @@
                 name="ioe"
                 id="ioe"
               />
+              <label class="lab" for="ioe">I/I</label>
             </li>
             <li>
+              <input class="check" type="checkbox" name="boxe" value=2 id="BME"  />
               <label class="lab" for="BCE">I/II</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+                >
             </li>
             <li>
-              <label class="lab" for="BCE">II/I</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+            <input class="check" type="checkbox" name="boxe" value=1 id="BME" />
+            <label class="lab" for="BCE">II/I</label
+              >
             </li>
             <li>
-              <label class="lab" for="BCE">III/I</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+             <input class="check" type="checkbox" name="boxe" value=3 id="BME"  />
+             <label class="lab" for="BCE">III/I</label
+              >
             </li>
             <li>
+              <input class="check" type="checkbox" name="boxe" value=4 id="BME"  />
               <label class="lab" for="BCE">III/II</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+                >
             </li>
             <li>
-              <label class="lab" for="BCE">IV/I</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+             <input class="check" type="checkbox" name="boxe" value=5 id="BME" />
+             <label class="lab" for="BCE">IV/I</label
+              >
             </li>
             <li>
-              <label class="lab" for="BCE">IV/II</label
-              ><input class="check" type="checkbox" name="BCT" id="BCT" />
+             <input class="check" type="checkbox" name="boxe" value=6 id="BME" />
+             <label class="lab" for="BCE">IV/II</label
+              >
             </li>
           </ul>
         </div>
+      
       </div>
-
+      <h2>Search Results for "{{ query }} and {{list}}"</h2>
       <div class="content"></div>
-      <section class="contain">
-        <center>
-          <div class="container">
-            <li>
-              {% for c in results %} Faculty:{{ c.faculty }} &nbsp &nbsp &nbsp
-              &nbsp Semester: {{c.semester}} &nbsp &nbsp &nbsp year:{{c.year}}
-              <br />
-              <img class="cImg" src="{% static "img/" %}{{ c.imagecropped }} "
-              alt="{% static "img/" %}{{ c.imagecropped }} " />
-              <hr class="dashed" />
-            </li>
 
-            {% endfor %} {% comment %}
-            https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
-            https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
-            {% endcomment %}
-          </div>
-        </center>
-      </section>
+      <center>
+        <div class="container">
+          <li>
+            {% for c in results %} Faculty:{{ c.faculty }} &nbsp &nbsp &nbsp
+            &nbsp Semester: {{c.semester}} &nbsp &nbsp &nbsp year:{{c.year}}
+            <br />
+            <img class="cImg" src="{% static "img/" %}{{ c.imagecropped }} "
+            alt="{% static "img/" %}{{ c.imagecropped }} " />
+            <hr class="dashed" />
+          </li>
+
+          {% endfor %} {% comment %}
+          https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
+          https://github.com/prathamadh/photobase/blob/3b07f326fb0ec6346694076434b63649e4b20a33/ioepng/94.png
+          {% endcomment %}
+        </div>
+      </center>
+    </form>
+     
     </section>
 
     <script src="{%static 'js/year.js' %}"></script>
