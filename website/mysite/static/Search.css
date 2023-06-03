@@ -264,6 +264,14 @@ button {
   font-family: "Pangolin", cursive;
 }
 
+.para-res {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Pangolin", cursive;
+  color: black;
+  font-weight: bold;
+}
+
 .contain {
   /* background-color: #ccc; */
 }
